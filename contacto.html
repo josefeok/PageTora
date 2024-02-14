@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jose Fernandez">
+    <meta name="description" content="primera pagina web">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-image: url("imagenes/backgroundfinal.JPG");
+            background-size: cover;
+            /* La imagen se ajustará para que quepa completamente dentro del área del contenedor */
+            background-repeat: no-repeat;
+            /* Evita que la imagen se repita */
+            display: flex; /* Utilizamos flexbox para el diseño */
+            flex-direction: column; /* Alineamos los elementos en columna */
+            align-items: center; /* Centramos horizontalmente */
+            justify-content: center; /* Centramos verticalmente */
+            height: 100vh; /* Ajustamos la altura de la página */
+        }
+
+        header {
+            padding: 5px 0;
+            text-align: center;
+            z-index: 9999;
+        }
+
+        header h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 36px;
+            margin: 0px;
+        }
+
+        nav {
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        article {
+            padding: 20px;
+            display: flex; /* Utilizamos flexbox para el diseño */
+            justify-content: space-between; /* Espacio entre los elementos */
+            align-items: center; /* Centramos verticalmente */
+            flex-grow: 1; /* El artículo crecerá para ocupar el espacio disponible */
+            max-width: 1200px; /* Limitamos el ancho máximo */
+            width: 100%;
+        }
+
+        aside {
+            width: 45%; /* Ajustamos el ancho del aside */
+            height: 72%; /* Ajustamos la altura */
+        }
+
+        .container {
+            width: 45%; /* Ajustamos el ancho del container */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #fcf8f8;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        footer p {
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center; /* Centrar el texto */
+        }
+
+        ul li {
+            display: block;
+            margin: 50 0px; /* Espacio entre los elementos */
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px; /* Tamaño de fuente más grande */
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>FRAGANCIAS TORA</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="mujer.html">Fragancias Femeninas</a></li>
+            <li><a href="hombre.html">Fragancias Masculinas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <article>
+        <div class="container">
+
+            <h2>Contacto</h2>
+
+            <form action="mailto:toraperfumeria@gmail.com" method="post" autocomplete="off" enctype="text/plain">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </form>
+        </div>
+        <aside>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5527.890011742741!2d-58.51492959772251!3d-34.53068376056863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0d039e5feb7%3A0x7dc75a79b02d9a20!2sPlaza%20Leandro%20N.%20Alem!5e0!3m2!1ses!2sar!4v1707430060313!5m2!1ses!2sar"
+                width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </aside>
+
+    </article>
+    <footer>
+        <p>&#169; TORA </p>
+    </footer>
+</body>
+
+</html>
